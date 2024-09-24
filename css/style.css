@@ -1,0 +1,171 @@
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+header {
+    display: block;
+}
+
+.header-pc {
+    position: relative;
+}
+
+nav {
+    display: block;
+}
+
+.header-pc-fixed {
+    background-color: #4FC1E4;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 180px;
+}
+
+div {
+    display: block;
+}
+
+.container {
+    max-width: calc(1320px + 3rem);
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    box-sizing: border-box;
+}
+.container, .container-fluid {
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hearder-pc-header-top {
+    display: flex;
+}
+
+.header-pc-left {
+    display: inherit;
+    align-items: center;
+}
+
+
+.header-pc-left p {
+    margin-left: 0;
+    margin: 0 5px;
+    font-size: .75rem;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.hotline {
+    display: flex;
+    align-items: center;
+    padding: 4px 12px;
+    background-color: #29999B;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.header-pc-right {
+    display: inherit;
+    right: 0;
+    margin-left: auto;
+    align-items: center;
+}
+
+.account {
+    border-right: 1px solid rgba(158,186,237,.5);
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    outline: none;
+    
+    color: #fff;
+    font-size: .75rem;
+    padding: 0 10px;
+    cursor: pointer;
+    text-decoration: none;
+    border-right: 1px solid rgba(158,186,237,.5);
+    margin: 12px 0;
+    line-height: 20px;
+}
+
+.account p {
+    border: none;
+    margin: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+    outline: none;
+}
+
+.hearder-pc-header-body {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header-body-logo {
+    display: flex;
+    align-items: center;
+    height: 54px;
+    border-radius: 0.75rem;
+    padding: 0 10px;
+    margin-left: 16px;
+    padding-top: 2%;
+    cursor: pointer;
+}
+
+.hearder-pc-header-body .header-body-search {
+    flex: 40% 1;
+    flex-direction: row;
+    margin-left: 16px;
+    position: relative;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.header-body-search .searchBox {
+    display: flex;
+    align-items: center;
+    height: 54px;
+    background-color: #fff;
+    padding: 0 10px;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 12px rgba(15,61,145,.12);
+}
+
+.searchBox input {
+    border: unset;
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    font-size: .938rem;
+    text-overflow: ellipsis;
+}
+
+body {
+    font-family: RoundedNext;
+}
+
+
+
+
+
+
+
+
+
