@@ -38,7 +38,7 @@
 
 /*
  *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
+ * APPLICATION ENVIRONMENT cỵtcxtajvsxajvj
  *---------------------------------------------------------------
  *
  * You can load different configurations depending on your
@@ -48,6 +48,7 @@
  * This can be set to anything, but default usage is:
  *
  *     development
+ * rfrf4gd34g53
  *     testing
  *     production
  *
