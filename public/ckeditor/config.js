@@ -8,10 +8,10 @@
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 	config.removeDialogTabs = 'image:advanced;link:advanced';
-	config.filebrowserBrowseUrl = 'http://localhost/Web/public/ckfinder/ckfinder.html';
-	config.filebrowserImageBrowseUrl = 'http://localhost/Web/public/ckfinder/ckfinder.html?type=Images';
-	config.filebrowserFlashBrowseUrl = 'http://localhost/Web/public/ckfinder/ckfinder.html?type=Flash'; 
-	config.filebrowserUploadUrl = 'http://localhost/Web/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'; 
-	config.filebrowserImageUploadUrl = 'http://localhost/Web/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
-	config.filebrowserFlashUploadUrl = 'http://localhost/Web/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
+	config.filebrowserBrowseUrl = 'http://localhost/Kiem-Thu-Kiem-Thu-Web/public/ckfinder/ckfinder.html';
+	config.filebrowserImageBrowseUrl = 'http://localhost/Kiem-Thu-Web/public/ckfinder/ckfinder.html?type=Images';
+	config.filebrowserFlashBrowseUrl = 'http://localhost/Kiem-Thu-Web/public/ckfinder/ckfinder.html?type=Flash'; 
+	config.filebrowserUploadUrl = 'http://localhost/Kiem-Thu-Web/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'; 
+	config.filebrowserImageUploadUrl = 'http://localhost/Kiem-Thu-Web/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
+	config.filebrowserFlashUploadUrl = 'http://localhost/Kiem-Thu-Web/public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
 };
