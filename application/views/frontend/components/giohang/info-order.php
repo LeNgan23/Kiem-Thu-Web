@@ -11,14 +11,14 @@ if(!$this->session->userdata('cart')){
         <div class="col-md-12">
             <div class="wrapper overflow-hidden">
                 <form action="" enctype="multipart/form-data" method="post" accept-charset="utf-8" name='info-order' novalidate>
-                   <?php
-                   if(!$this->session->userdata('sessionKhachHang')){
-                     echo ' <div style="font-size: 16px; padding-top: 10px; color: #ccc;">
-                     Bạn có tài khoản? 
-                     <a href="dang-nhap" style="color: ">Ấn vào đây để đăng nhập</a>
-                     </div>';
-                 }
-                 ?>   
+                <?php
+                if(!$this->session->userdata('sessionKhachHang')){
+                    echo '<div style="font-size: 16px; padding-top: 10px; color: #ccc;">
+                    Bạn có tài khoản? 
+                    <a href="dang-nhap" style="color: #007bff;">Ấn vào đây để đăng nhập</a>
+                    </div>';
+                }
+                ?>
                  <div class="checkout-content">
                    <div class="col-xs-12 col-sm-12 col-md-8 col-login-checkout" style="margin-bottom: 20px">
 
@@ -29,14 +29,18 @@ if(!$this->session->userdata('cart')){
                                 <tr>
                                     <td class="width30 text-right td-right-order">Khách hàng: <span class="require_symbol">* </span></td>
                                     <td>
-                                        <input type="text" class="form-control" placeholder="Họ và tên" name="name" value="<?php echo $user['fullname'] ?>" <?php if($this->session->userdata('sessionKhachHang')) echo'readonly'?>>
+                                        <input type="text" class="form-control" placeholder="Họ và tên" name="name" 
+                                        value="<?php echo isset($user['fullname']) ? $user['fullname'] : '' ?>" 
+                                        <?php if($this->session->userdata('sessionKhachHang')) echo 'readonly'?>>
                                         <div class="error"><?php echo form_error('name')?></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="width30 text-right td-right-order">Email: <span class="require_symbol">* </span></td>
                                     <td>
-                                        <input type="text" class="form-control" name="<?php if($this->session->userdata('sessionKhachHang')) echo 'tv'; else echo 'email'?>" value="<?php echo $user['email'] ?>" placeholder="Email" <?php if($this->session->userdata('sessionKhachHang')) echo'readonly'?>>
+                                        <input type="text" class="form-control" name="<?php echo $this->session->userdata('sessionKhachHang') ? 'tv' : 'email'; ?>" 
+                                        value="<?php echo isset($user['email']) ? $user['email'] : '' ?>" placeholder="Email" 
+                                        <?php if($this->session->userdata('sessionKhachHang')) echo 'readonly'?>>
                                         <div class="error"><?php echo form_error('email')?></div>
                                     </td>
                                 </tr>
@@ -44,7 +48,9 @@ if(!$this->session->userdata('cart')){
                                 <tr>
                                     <td class="width30 text-right td-right-order">Số điện thoại: <span class="require_symbol">* </span></td>
                                     <td>
-                                        <input type="text"  class="form-control" placeholder="Số điện thoại" name="phone" value="<?php echo $user['phone'] ?>" <?php if($this->session->userdata('sessionKhachHang')) echo'readonly'?>>
+                                        <input type="text" class="form-control" placeholder="Số điện thoại" name="phone" 
+                                        value="<?php echo isset($user['phone']) ? $user['phone'] : '' ?>" 
+                                        <?php if($this->session->userdata('sessionKhachHang')) echo 'readonly'?>>
                                         <div class="error"><?php echo form_error('phone')?></div>
                                     </td>
                                 </tr>
@@ -73,7 +79,9 @@ if(!$this->session->userdata('cart')){
                                 <tr>
                                     <td class="width30 text-right td-right-order">Địa chỉ giao hàng: <span class="require_symbol">* </span></td>
                                     <td>
-                                        <textarea name="address" placeholder="Địa chỉ giao hàng:" class="form-control" rows="4" ="" style="height: auto !important;" value="<?php echo $user['address'] ?>"></textarea>
+                                        <textarea name="address" placeholder="Địa chỉ giao hàng:" class="form-control" rows="4" style="height: auto !important;">
+                                        <?php echo isset($user['address']) ? $user['address'] : ''; ?>
+                                        </textarea>
                                         <div class="error"><?php echo form_error('address')?></div>
                                     </td>
                                 </tr>

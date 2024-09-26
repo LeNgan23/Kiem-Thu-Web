@@ -87,10 +87,10 @@
 													</a>
 												</td>
 												<?php
-												if($user['role']==1){
+												if ($user['role'] == 1) {
 													echo '<td class="text-center">
-													<a class="btn btn-success btn-xs" href="<?php echo base_url() ?>admin/category/update/'.$row['id'] .'" role = "button">
-													<span class="glyphicon glyphicon-edit"></span>Sửa
+													<a class="btn btn-success btn-xs" href="' . base_url() . 'admin/category/update/' . $row['id'] . '" role="button">
+													<span class="glyphicon glyphicon-edit"></span> Sửa
 													</a>
 													</td>';
 												}
