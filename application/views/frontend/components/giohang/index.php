@@ -47,7 +47,7 @@
 											</td>
 											<td>
 												<div class="quantity clearfix">
-													<input name="quantity" id="<?php echo $row['id'] ?>" class="form-control" type="number" value="<?php echo $value ?>" min="1" max="1000" onchange="onChangeSL(<?php echo $row['id'] ?>)">
+													<input name="quantity" id="<?php echo $row['id'] ?>" class="form-control" type="number" value="<?php echo $value ?>" min="1" max="<?php echo $row['number'] ?>" onchange="onChangeSL(<?php echo $row['id'] ?>)">
 												</div>
 											</td>
 											<td>
