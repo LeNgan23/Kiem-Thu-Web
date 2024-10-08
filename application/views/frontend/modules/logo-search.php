@@ -9,7 +9,7 @@
           <i class="icon fa fa-phone"></i> (87) 888 888 868
         </div>
         <div class="contact inline">
-          <i class="icon fa fa-envelope"></i> sale.smart.store.2019@gmail.com
+          <i class="icon fa fa-envelope"></i> mobilestore2024@gmail.com
         </div>
       </div>
       <form action="search" method="get" role="form">
