@@ -28,15 +28,15 @@
                 <ul class="list-unstyled">
                     <li class="clearfix">
                         <i class="fa fa-map-marker"></i>
-                        <span>33 Trần Xuân Soạn, Quận 7, TPHCM</span>
+                        <span>273 An Dương Vương, Quận 5, TPHCM</span>
                     </li>
                     <li class="clearfix">
                         <i class="fa fa-phone"></i>
-                        <span>0978651616 - 0981.334455</span>
+                        <span>0987654321 - 0912345678</span>
                     </li>
                     <li class="clearfix">
                         <i class="fa fa-envelope"></i>
-                        <span><a href="mailto:vanhiepp1998@gmail.com">vanhiepp1998@gmail.com</a></span>
+                        <span><a href="mailto:vanhiepp1998@gmail.com">nganhank21@gmail.com</a></span>
                     </li>
                 </ul>
             </div>

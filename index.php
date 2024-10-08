@@ -49,7 +49,6 @@
  * This can be set to anything, but default usage is:
  *
  *     development
- * rfrf4gd34g53
  *     testing
  *     production tertertertb 
  *
