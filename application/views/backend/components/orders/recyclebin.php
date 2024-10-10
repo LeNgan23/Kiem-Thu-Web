@@ -1,6 +1,6 @@
 <div class="content-wrapper">
 	<section class="content-header">
-		<h1><i class="glyphicon glyphicon-list-alt"></i> Thùng rác đơn hàng</h1>
+		<h1><i class="glyphicon glyphicon-list-alt"></i> Đơn hàng lưu trữ</h1>
 		<div class="breadcrumb">
 			<a class="btn btn-primary btn-sm" href="admin/orders" role="button">
 				<span class="glyphicon glyphicon-remove do_nos"></span> Thoát
