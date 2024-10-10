@@ -10,7 +10,7 @@ if(!$this->session->userdata('cart')){
     <div class="container">
         <div class="col-md-12">
             <div class="wrapper overflow-hidden">
-                <form action="" enctype="multipart/form-data" method="post" accept-charset="utf-8" name='info-order' novalidate>
+                <form action="<?php echo site_url('OrderController/info_order'); ?>" enctype="multipart/form-data" method="post" accept-charset="utf-8" name='info-order' novalidate>
                 <?php
                 if(!$this->session->userdata('sessionKhachHang')){
                     echo '<div style="font-size: 16px; padding-top: 10px; color: #ccc;">
