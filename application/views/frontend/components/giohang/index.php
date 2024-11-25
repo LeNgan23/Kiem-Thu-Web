@@ -47,7 +47,8 @@
 											</td>
 											<td>
 												<div class="quantity clearfix">
-													<input name="quantity" id="<?php echo $row['id'] ?>" class="form-control" type="number" value="<?php echo $value ?>" min="1" max="<?php echo $row['number']-$row['number_buy'] ?>" onchange="onChangeSL(<?php echo $row['id'] ?>)">
+													<input name="quantity" id="<?php echo $row['id'] ?>" class="form-control" type="number" value="<?php echo $value ?>" min="1" max="<?php echo $row['number']-$row['number_buy'] ?>" onchange="onChangeSL(<?php echo $row['id'] ?>);" oninput="check(<?php echo $row['id'] ?>)">
+													<h6 id="quantity_display_<?php echo $row['id']; ?>">Số lượng đã nhập: <?php echo $value; ?></h6>
 												</div>
 											</td>
 											<td>
@@ -147,4 +148,19 @@
 				}
 			});
 		}
+
+
+		function check(id){
+			var inputElement = document.getElementById(id);
+			// Lấy giá trị hiện tại của input (value) và max
+			var enteredValue = parseInt(inputElement.value); // Giá trị người dùng nhập
+			var maxQuantity = parseInt(inputElement.max);   // Giá trị tồn kho tối đa
+
+			if(enteredValue > maxQuantity){
+				alert("Giới hạn sản phẩm là: " + maxQuantity);
+				inputElement.value = maxQuantity;
+			}
+		}
+						
+
 	</script>
