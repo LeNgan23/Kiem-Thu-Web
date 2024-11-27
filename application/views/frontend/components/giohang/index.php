@@ -48,7 +48,7 @@
 											<td>
 												<div class="quantity clearfix">
 													<input name="quantity" id="<?php echo $row['id'] ?>" class="form-control" type="number" value="<?php echo $value ?>" min="1" max="<?php echo $row['number']-$row['number_buy'] ?>" onchange="onChangeSL(<?php echo $row['id'] ?>);" oninput="check(<?php echo $row['id'] ?>)">
-													<h6 id="quantity_display_<?php echo $row['id']; ?>">Số lượng đã nhập: <?php echo $value; ?></h6>
+													<h6 id="quantity_display_<?php echo $row['id']; ?>">Số lượng tồn: <?php echo $row['number']-$row['number_buy'] ?></h6>
 												</div>
 											</td>
 											<td>
