@@ -14,8 +14,8 @@ class Dangnhap extends CI_Controller {
 
     public function dangnhap(){
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('username', 'Tài khoản', 'required|min_length[5]|max_length[32]');
-        $this->form_validation->set_rules('password', 'Mật khẩu', 'required|min_length[5]|max_length[32]');
+        $this->form_validation->set_rules('username', 'Tài khoản', 'required|min_length[6]|max_length[32]');
+        $this->form_validation->set_rules('password', 'Mật khẩu', 'required|min_length[6]|max_length[32]');
         if($this->form_validation->run() ==TRUE){
             $username = $_POST['username'];
             $password = md5($_POST['password']);
@@ -59,15 +59,15 @@ class Dangnhap extends CI_Controller {
 
         $this->load->library('form_validation');
         $this->load->helper('form');
-        $this->form_validation->set_rules('username', 'Tên đăng nhập', 'required|min_length[5]|max_length[32]|is_unique[db_customer.username]');
+        $this->form_validation->set_rules('username', 'Tên đăng nhập', 'required|min_length[6]|max_length[32]|is_unique[db_customer.username]');
         $this->form_validation->set_rules('name', 'Họ và tên', 'required|min_length[5]');
-        $this->form_validation->set_rules('password', 'Mật khẩu', 'required|min_length[5]|max_length[32]');
+        $this->form_validation->set_rules('password', 'Mật khẩu', 'required|min_length[6]|max_length[32]');
         if(!$this->session->userdata('sessionKhachHang')){
             $this->form_validation->set_rules('email', 'Email', 'required|is_unique[db_customer.email]');
         }
         $this->form_validation->set_rules('re_password', 'Nhập lại mật khẩu', 'required|matches[password]');
         
-        $this->form_validation->set_rules('phone', 'Số điện thoại', 'required|min_length[5]|numeric|is_unique[db_customer.phone]|max_length[11]');
+        $this->form_validation->set_rules('phone', 'Số điện thoại', 'required|min_length[6]|numeric|is_unique[db_customer.phone]|max_length[11]');
         
         if($this->form_validation->run() ==TRUE){
             $data = array(

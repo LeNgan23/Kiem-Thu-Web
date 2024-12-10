@@ -1,6 +1,4 @@
 <?php
-namespace App\Controllers;
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Giohang extends CI_Controller {

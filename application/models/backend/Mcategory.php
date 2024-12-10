@@ -54,12 +54,7 @@ class Mcategory extends CI_Model {
 		$this->db->limit(1);
         $query = $this->db->get($this->table);
         $row=$query->row_array();
-        if ($query->num_rows() > 0) {
-			$row = $query->row_array();
-			return $row['parentid'];
-		} else {
-			return null; // Hoặc một giá trị mặc định nếu cần
-		}
+        return $row['parentid'];
 	}
 	// Lấy lên tên danh mục
 	public function category_name_parent($id)
@@ -70,12 +65,7 @@ class Mcategory extends CI_Model {
 		$this->db->limit(1);
         $query = $this->db->get($this->table);
         $row=$query->row_array();
-		if ($query->num_rows() > 0) {
-			$row = $query->row_array();
-			return $row['name'];
-		} else {
-			return null; // Trả về null hoặc tên mặc định nếu cần
-		}
+        return $row['name'];
 	}
 	// Lấy lên danh sách danh mục
 	public function category_list()
@@ -131,12 +121,5 @@ class Mcategory extends CI_Model {
         $query = $this->db->get($this->table);
         $row=$query->row_array();
         return $row['name'];
-    }public function product_count_parentid($category_id)
-    {
-        // Kiểm tra danh mục sản phẩm
-        $this->db->where('category_id', $category_id); // Giả sử 'category_id' là cột liên kết với danh mục
-        $this->db->where('trash', 1); // Sản phẩm chưa bị xóa
-        $query = $this->db->get($this->db->dbprefix('product')); // 'product' là tên bảng sản phẩm
-        return $query->num_rows(); // Trả về số lượng sản phẩm
     }
 }

@@ -18,27 +18,17 @@ class Product extends CI_Controller {
 	}
 
 	public function index(){
-    $limit=10;
-    $current = 1;         // Trang hiện tại
-$first = ($current - 1) * $limit;  // Vị trí bắt đầu của các sản phẩm
-
-// Sắp xếp theo tên sản phẩm (có thể thay đổi tùy ý)
-$f = 'name';  // Field để sắp xếp
-$od = 'ASC';  // Thứ tự sắp xếp (ASC hoặc DESC)
-
-// Gọi phương thức product_sanpham với 4 tham s
 		$this->load->library('phantrang');
 		$this->load->library('session');
-		
+		$limit=10;
 		$current=$this->phantrang->PageCurrent();
 		$first=$this->phantrang->PageFirst($limit, $current);
 		$total=$this->Mproduct->product_sanpham_count();
 		$this->data['strphantrang']=$this->phantrang->PagePer($total, $current, $limit, $url='admin/product');
-		$this->data['list'] = $this->Mproduct->product_sanpham($limit, $first, $f, $od);
+		$this->data['list']=$this->Mproduct->product_sanpham($limit,$first);
 		$this->data['view']='index';
 		$this->data['title']='Danh mục sản phẩm';
 		$this->load->view('backend/layout', $this->data);
-
 	}
 
 	public function insert(){

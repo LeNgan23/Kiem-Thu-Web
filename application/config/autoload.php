@@ -134,4 +134,4 @@ $autoload['language'] = array();
 */
 $autoload['model'] = array();
 $autoload['libraries'] = array('database', 'session', 'pagination');
-$autoload['model'] = array('frontend/Mproduct', 'frontend/Mcategory');
+

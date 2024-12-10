@@ -118,7 +118,7 @@ class Orders extends CI_Controller {
     }else{
       $mydata= array('trash' => 0);
       $this->Morders->orders_update($mydata, $id);
-      $this->session->set_flashdata('success', 'lưu đơn hàng '.$row['orderCode'].' thành công');
+      $this->session->set_flashdata('success', 'lưu đơn hàng '.$row['orderCode'].' vào thùng rác thành công');
       redirect('admin/orders','refresh');
     }
   }
