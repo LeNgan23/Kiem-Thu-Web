@@ -131,5 +131,12 @@ class Mcategory extends CI_Model {
         $query = $this->db->get($this->table);
         $row=$query->row_array();
         return $row['name'];
+    }public function product_count_parentid($category_id)
+    {
+        // Kiểm tra danh mục sản phẩm
+        $this->db->where('category_id', $category_id); // Giả sử 'category_id' là cột liên kết với danh mục
+        $this->db->where('trash', 1); // Sản phẩm chưa bị xóa
+        $query = $this->db->get($this->db->dbprefix('product')); // 'product' là tên bảng sản phẩm
+        return $query->num_rows(); // Trả về số lượng sản phẩm
     }
 }

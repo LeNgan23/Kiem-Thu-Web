@@ -91,5 +91,6 @@ class Mproduct extends CI_Model {
             $this->db->order_by('id', 'desc');
             return $this->db->get();
     }
-
+    // Trong model Mproduct
+    
 }

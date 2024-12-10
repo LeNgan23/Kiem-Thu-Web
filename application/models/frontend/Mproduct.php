@@ -150,4 +150,18 @@ class Mproduct extends CI_Model {
         $query = $this->db->get($this->table);
         return $query->result_array();
     }
+
+    public function product_trash_count()
+    {
+        $this->db->where('trash', 1); // Giả sử cột 'trash' = 1 nghĩa là sản phẩm bị đưa vào thùng rác
+        $query = $this->db->get($this->table);
+        return $query->num_rows(); // Trả về số lượng bản ghi
+    }
+    public function product_count_parentid($catid)
+{
+    $this->db->where('catid', $catid);  // Kiểm tra theo danh mục
+    $this->db->where('trash', 1);        // Sản phẩm không bị xóa
+    $query = $this->db->get($this->table);  // Lấy dữ liệu từ bảng 'product'
+    return count($query->result_array());  // Trả về số lượng sản phẩm
+}
 }
