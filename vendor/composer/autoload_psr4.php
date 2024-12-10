@@ -12,5 +12,8 @@ return array(
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'CodeIgniter\\' => array($vendorDir . '/codeigniter4/framework/system'),
+<<<<<<< HEAD
     'App\\' => array($baseDir . '/application'),
+=======
+>>>>>>> 85b01da3a878c49354cdd11dc1dad2485f49cc24
 );

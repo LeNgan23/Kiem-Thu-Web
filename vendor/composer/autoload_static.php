@@ -30,10 +30,13 @@ class ComposerStaticInit2ddac1ef68e9fe3f1cbbc1c40081dbe8
         array (
             'CodeIgniter\\' => 12,
         ),
+<<<<<<< HEAD
         'A' => 
         array (
             'App\\' => 4,
         ),
+=======
+>>>>>>> 85b01da3a878c49354cdd11dc1dad2485f49cc24
     );
 
     public static $prefixDirsPsr4 = array (
@@ -61,10 +64,13 @@ class ComposerStaticInit2ddac1ef68e9fe3f1cbbc1c40081dbe8
         array (
             0 => __DIR__ . '/..' . '/codeigniter4/framework/system',
         ),
+<<<<<<< HEAD
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/application',
         ),
+=======
+>>>>>>> 85b01da3a878c49354cdd11dc1dad2485f49cc24
     );
 
     public static $prefixesPsr0 = array (
