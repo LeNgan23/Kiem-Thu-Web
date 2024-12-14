@@ -3,7 +3,7 @@
 		<h1><i class="glyphicon glyphicon-list-alt"></i> Danh sách đơn hàng</h1>
 		<div class="breadcrumb">
 			<a class="btn btn-primary btn-sm" href="admin/orders/recyclebin" role="button">
-				<span class="glyphicon glyphicon-trash"></span> Đơn hàng đã lưu (<?php $total=$this->Morders->orders_trash_count(); echo $total; ?>)
+				<span class="glyphicon glyphicon-trash"></span> Thùng rác (<?php $total=$this->Morders->orders_trash_count(); echo $total; ?>)
 			</a>
 		</div>
 	</section>
@@ -103,7 +103,7 @@
 														</a>
 														<!-- /Xóa -->
 														<a class="btn bg-olive btn-xs" href="<?php echo base_url() ?>admin/orders/trash/<?php echo $val['id'] ?>"  onclick="return confirm('Xác nhận lưu đơn hàng này ?')" role = "button">
-															<i class="fa fa-save"></i> Lưu đơn
+															<i class="fa fa-save"></i> Xóa đơn
 														</a>
 													</td>
 												</tr>
