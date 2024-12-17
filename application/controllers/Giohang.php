@@ -281,7 +281,6 @@ class Giohang extends CI_Controller {
             }
         }
     }
-
 }
 echo json_encode($html);
 }

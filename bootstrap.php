@@ -14,8 +14,6 @@ if (!defined('VIEWPATH')) {
     define('VIEWPATH', APPPATH . 'views/');
 }
 
-
-
 // Khởi chạy CodeIgniter
 require_once __DIR__ . '/system/core/CodeIgniter.php';
 

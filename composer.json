@@ -1,26 +1,32 @@
 {
-    "name": "admin/kiem-thu-web",
-    "autoload": {
-        "psr-4": {
-             "Admin\\KiemThuWeb\\": "src/",
-            "Tests\\Support\\": "tests/_support/",
-            "Helper\\": "tests/_support/Helper/"
-        }
-    },
-    "authors": [
-        {
-            "name": "dghant",
-            "email": "trandonggiahan2003@gmail.com"
-        }
-    ],
-    "require-dev": {
+    "name": "yourvendor/kiem-thu-web",
+    "description": "A brief description of your project",
+    "require": {
         "codeception/codeception": "^5.1",
         "codeception/module-phpbrowser": "*",
         "codeception/module-asserts": "*",
-        "codeception/stub": "^4.1",
-        "phpunit/phpunit": "^10.5"
+        "facebook/webdriver": "*"
     },
-    "require": {
-    "codeigniter4/framework": "^4.0"
+    "config": {
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "classmap": [
+            "application/models",         
+            "/application/libraries",      
+            "/application/controllers",    
+            "/application/helpers",        
+            "/system/core",                
+            "/system/database",            
+            "/system/libraries"            
+        ]
+    },
+    "scripts": {
+        "test": "vendor/bin/codecept run"
+    },
+    "require-dev": {
+        "codeception/module-rest": "^3.4",
+        "symfony/http-foundation": "6.4"
     }
 }

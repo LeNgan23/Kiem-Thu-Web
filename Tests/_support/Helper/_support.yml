@@ -1,5 +1,0 @@
-# tests/_support/Helper/_support.yml
-extensions:
-    enabled:
-        - Codeception\Extension\RunFailed
-        - \Tests\Support\Helper\Helper

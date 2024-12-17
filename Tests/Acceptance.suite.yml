@@ -7,12 +7,8 @@ actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-            url: http://localhost/Kiem-Thu-Web
+            url: http://localhost/myapp
 # Add Codeception\Step\Retry trait to AcceptanceTester to enable retries
-        - WebDriver:
-            url: http://localhost/Kiem-Thu-Web/
-            browser: chrome
-         - Asserts
 step_decorators:
     - Codeception\Step\ConditionalAssertion
     - Codeception\Step\TryTo
