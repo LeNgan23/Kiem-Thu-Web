@@ -9,7 +9,6 @@ class SanphamTest extends TestCase {
     {
       
     }
-
     // Giả lập dữ liệu sản phẩm
     private function generateProductData() {
         return [
@@ -22,7 +21,6 @@ class SanphamTest extends TestCase {
             'status' => 1,  // Available
         ];
     }
-
     // Giả lập dữ liệu giỏ hàng
     private function generateCartData() {
         return [
@@ -122,26 +120,22 @@ class SanphamTest extends TestCase {
       // Test case: Cập nhật số lượng sản phẩm trong giỏ hàng
       public function testUpdateCart()
       {
+        $number = 100;
           // Giả lập giỏ hàng (dữ liệu mẫu)
           $cart = $this->generateCartData();  // Đây là phương thức giả lập dữ liệu giỏ hàng
-      
           // Kiểm tra nếu giỏ hàng là mảng, nếu không thì khởi tạo giỏ hàng mới
           if (!is_array($cart)) {
               $cart = [];
           }
-      
           // Cập nhật số lượng của sản phẩm ID = 1
           if (isset($cart[1])) {
               // Nếu sản phẩm đã có trong giỏ, cập nhật số lượng
-              $cart[1] = 5;  // Đặt lại số lượng sản phẩm ID = 1 thành 5
+              $cart[1] = $number;  // Đặt lại số lượng sản phẩm ID = 1 thành 5
           } else {
               // Nếu sản phẩm chưa có trong giỏ hàng, thêm mới vào giỏ với số lượng = 5
-              $cart[1] = 5;
+              $cart[1] = $number;
           }
-      
           // Kiểm tra xem số lượng của sản phẩm đã được cập nhật chưa
-          $this->assertEquals(5, $cart[1]);  // Kiểm tra số lượng sản phẩm ID = 1
+          $this->assertEquals($number, $cart[1]);  // Kiểm tra số lượng sản phẩm ID = 1
       }
-
-
 }

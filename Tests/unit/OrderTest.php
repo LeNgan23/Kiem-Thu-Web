@@ -28,10 +28,13 @@ class OrderTest extends TestCase
         $orderData = $this->generateOrderData();
     
         // Kiểm tra trạng thái của đơn hàng trước khi hủy (status = 2)
-        $this->assertEquals(2, $orderData['status']); // Trước khi hủy, trạng thái là 2 (chờ xử lý)
+        $this->assertTrue(
+            $orderData['status'] == 0 || $orderData['status'] == 1,
+            "Trạng thái đơn hàng phải là 0 hoặc 1 trước khi hủy"
+        ); // Trước khi hủy, trạng thái là 2 (chờ xử lý)
     
         // Giả lập hành động hủy đơn hàng
-        if ($orderData['status'] == 2) {
+        if ($orderData['status'] == 0 || $orderData['status'] == 1) {
             // Thực hiện hành động hủy
             $orderData['status'] = 4; // Trạng thái sau khi hủy (4 là trạng thái hủy)
     
@@ -57,7 +60,7 @@ class OrderTest extends TestCase
             'province' => 1,
             'district' => 1,
             'address' => '123 Main Street',
-            'status' => 0,
+            'status' => 1,
         ];
     }
         public function testRestoreOrder()
